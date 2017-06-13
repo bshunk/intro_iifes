@@ -4,9 +4,13 @@ let globalVar = 500;
 
 // iife: immediately invoked function expression
 
-(function() {
-	globalVar += 250;
-}());
+(function(num) {
+	globalVar += num;
+}(globalVar));
+
+(function(num) {
+	globalVar += num;
+}(globalVar));
 
 console.log("global var", globalVar);
 
